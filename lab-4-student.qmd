@@ -1,9 +1,23 @@
 ---
-title: "Lab 4: Childcare Costs in California"
-author: "Your name here!"
-format: html
-editor: source
-embed-resources: true
+title: "PA 4: Military Spending"
+author: "Sammy Paykel"
+date: "1/31/2025"
+format: 
+  html:
+    self-contained: true
+    code-fold: true
+    code-tools: true
+    embed-resources: true
+    toc: true
+    theme: lux
+editor: 
+  source: true
+execute:
+  echo: true
+  error: false
+  output: false
+  message: false
+  warning: false
 ---
 
 ## The Data
@@ -17,7 +31,7 @@ The data come to us from [TidyTuesday](https://github.com/rfordatascience/tidytu
 
 ```{r}
 #| label: setup
-
+library(tidyverse)
 ```
 
 ```{r}
@@ -26,9 +40,14 @@ The data come to us from [TidyTuesday](https://github.com/rfordatascience/tidytu
 childcare_costs <- read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-05-09/childcare_costs.csv')
 
 counties <- read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-05-09/counties.csv')
+
+childcare_costs
+counties
 ```
 
 **1. Briefly describe the dataset (~ 4 sentences). What information does it contain?**
+
+This dataset contains information on the median weekly cost of childcare for different regions in California. One table, loaded in as childcare_costs, 
 
 ## California Childcare Costs
 
